@@ -1,19 +1,22 @@
 
 import bs4 as BeautifulSoup
 from bs4 import BeautifulSoup
+import html.parser
 
-soup = BeautifulSoup(open('/home/tav/dev/acc/reddit-crawl-beautifulsoup/reddit.html'), 'html.parser')
+html = open('/home/roc/dev/acc_python/reddit-crawl-beautifulsoup/reddit.html')
 
-#print(soup)
+soup = BeautifulSoup(html, 'html.parser')
 
-main_table = soup.find('div', attrs={'class':'entry'})
+print(soup)
+
+#main_table = soup.find('div', attrs={'class':'entry'})
 
 #print(main_table)
 
-links = main_table.find('p', attrs={'class':'title may-blank outbound'})
+#links = main_table.find('p', attrs={'class':'title may-blank outbound'})
 
 #print(links)
 
-title = soup.find('p', attrs={'class': 'title'})
+#title = soup.find('p', attrs={'class': 'title'})
 
-print(title)
+#print(title)
